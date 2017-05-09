@@ -1,0 +1,26 @@
+test.png
+size: 736, 1437
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+layer1
+  rotate: false
+  xy: 0, 300
+  size: 736, 1137
+  orig: 736, 1137
+  offset: 0, 0
+  index: -1
+layer2
+  rotate: false
+  xy: 0, 0
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+layer3
+  rotate: false
+  xy: 256, 0
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1

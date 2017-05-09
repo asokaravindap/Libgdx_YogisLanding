@@ -1,0 +1,47 @@
+zombout.png
+size: 852, 200
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zomb1.png
+  rotate: false
+  xy: 0, 0
+  size: 142, 200
+  orig: 142, 200
+  offset: 0, 0
+  index: -1
+zomb2.png
+  rotate: false
+  xy: 142, 0
+  size: 142, 200
+  orig: 142, 200
+  offset: 0, 0
+  index: -1
+zomb3.png
+  rotate: false
+  xy: 284, 0
+  size: 142, 200
+  orig: 142, 200
+  offset: 0, 0
+  index: -1
+zomb4.png
+  rotate: false
+  xy: 426, 0
+  size: 142, 200
+  orig: 142, 200
+  offset: 0, 0
+  index: -1
+zomb5.png
+  rotate: false
+  xy: 568, 0
+  size: 142, 200
+  orig: 142, 200
+  offset: 0, 0
+  index: -1
+zomb6.png
+  rotate: false
+  xy: 710, 0
+  size: 142, 200
+  orig: 142, 200
+  offset: 0, 0
+  index: -1

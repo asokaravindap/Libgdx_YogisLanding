@@ -1,0 +1,40 @@
+yogi.png
+size: 1040, 205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yogi1.jpeg
+  rotate: false
+  xy: 0, 0
+  size: 208, 205
+  orig: 208, 205
+  offset: 0, 0
+  index: -1
+yogi2.jpeg
+  rotate: false
+  xy: 208, 0
+  size: 208, 205
+  orig: 208, 205
+  offset: 0, 0
+  index: -1
+yogi3.jpeg
+  rotate: false
+  xy: 416, 0
+  size: 208, 205
+  orig: 208, 205
+  offset: 0, 0
+  index: -1
+yogi4.jpeg
+  rotate: false
+  xy: 624, 0
+  size: 208, 205
+  orig: 208, 205
+  offset: 0, 0
+  index: -1
+yogi5.jpeg
+  rotate: false
+  xy: 832, 0
+  size: 208, 205
+  orig: 208, 205
+  offset: 0, 0
+  index: -1
