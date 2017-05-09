@@ -12,9 +12,6 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
  * Created by asok on 2/17/2017.
  */
 
-/**
- * This class is for Parallax background.
- */
 public class BackgroundActor extends Actor {
 
     private final TextureRegion textureRegion;
