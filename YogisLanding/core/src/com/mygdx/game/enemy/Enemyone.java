@@ -5,24 +5,29 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.math.Rectangle;
 import com.mygdx.game.util.Constants;
 
 /**
  * Created by asok on 5/8/2017.
  */
-public class Enemyone extends Actor {
+
+public class Enemyone extends GameActor {
 
     private float stateTime;
     private Animation runningAnimation;
+
+    Rectangle bounds;
 
     private float width = 0;
     private float height = 0;
 
     public Enemyone(){
         createAnimation();
-        setBounds((Gdx.graphics.getWidth()/2) - (Constants.YOGI_WIDTH / 2), 0,
+        setBounds((Gdx.graphics.getWidth() / 2) - (Constants.YOGI_WIDTH / 2), 0,
                 this.width, this.height);
+
+        bounds = new Rectangle(getX(),getY(),Constants.YOGI_WIDTH,Constants.YOGI_HEIGHT); // change the YOGIs parameters
     }
 
     private void createAnimation(){
@@ -50,9 +55,13 @@ public class Enemyone extends Actor {
     @Override
     public void act(float delta) {
         super.act(delta);
-
-            setPosition(getX() , getY() + (1.4f * 6.5f));
-
+            float newY = getY() + (1.4f * 6.5f);
+            setPosition(getX() , newY);
+            bounds.setPosition(getX(),newY);
     }
 
+    @Override
+    public Rectangle getBounds() {
+        return bounds;
+    }
 }

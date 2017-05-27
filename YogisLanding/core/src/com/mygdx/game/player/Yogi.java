@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.mygdx.game.util.Constants;
 
@@ -17,6 +18,8 @@ public class Yogi extends Actor {
     private float stateTime;
     private Animation runningAnimation;
 
+    Rectangle bounds;
+
     private float width = 0;
     private float height = 0;
 
@@ -24,9 +27,11 @@ public class Yogi extends Actor {
 
     public Yogi(){
         createAnimation();
-        setBounds((Gdx.graphics.getWidth()/2) - (Constants.YOGI_WIDTH / 2),
-                 (Gdx.graphics.getHeight()) - (Constants.YOGI_HEIGHT + 60),
-                 this.width, this.height);
+        setBounds((Gdx.graphics.getWidth() / 2) - (Constants.YOGI_WIDTH / 2),
+                (Gdx.graphics.getHeight()) - (Constants.YOGI_HEIGHT + 60),
+                this.width, this.height);
+
+        bounds = new Rectangle(getX(),getY(),Constants.YOGI_WIDTH,Constants.YOGI_HEIGHT);
     }
 
     private void createAnimation(){
@@ -65,12 +70,15 @@ public class Yogi extends Actor {
     public void act(float delta) {
         super.act(delta);
         accelX = -1 * Gdx.input.getAccelerometerX() ;
-//        System.out.println(String.valueOf(Gdx.input.getNativeOrientation()) + " Rotation :" + Gdx.input.getGyroscopeX());
 
         if((!isAtLeftEdge() && accelX < 0 ) || (!isAtRightEdge() && accelX > 0)) {
-            setPosition(getX() + (accelX * 6.5f), getY());
+            float newX = getX() + (accelX * 6.5f);
+            setPosition(newX, getY());
+            bounds.setPosition(newX, getY());
         }
-
     }
 
+    public Rectangle getBounds() {
+        return bounds;
+    }
 }
